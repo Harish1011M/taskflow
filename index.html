@@ -89,11 +89,44 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #fcca5c, #fc5c7d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 12px rgba(252,202,92,0.35);
+    }
+
+    .logo-wordmark {
+      display: flex;
+      align-items: baseline;
+      gap: 0px;
+    }
+
+    .logo-task {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
-      font-size: 24px;
+      font-size: 22px;
       letter-spacing: -0.5px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: var(--text);
+    }
+
+    .logo-flow {
+      font-family: 'Syne', sans-serif;
+      font-weight: 400;
+      font-size: 22px;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #fcca5c, #fc5c7d);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -701,7 +734,7 @@
   <!-- HEADER -->
   <header>
     <div class="header-top">
-      <div class="logo">TaskFlow ✨</div>
+      <div class="logo"><div class="logo-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 2 C11 2 12.4 6.8 11 11 C9.6 6.8 11 2 11 2Z" fill="white"/><path d="M11 20 C11 20 12.4 15.2 11 11 C9.6 15.2 11 20 11 20Z" fill="white"/><path d="M2 11 C2 11 6.8 12.4 11 11 C6.8 9.6 2 11 2 11Z" fill="white"/><path d="M20 11 C20 11 15.2 12.4 11 11 C15.2 9.6 20 11 20 11Z" fill="white"/><circle cx="11" cy="11" r="2" fill="white"/><circle cx="10.2" cy="3.5" r="1.2" fill="white" opacity="0.75"/></svg></div><div class="logo-wordmark"><span class="logo-task">Task</span><span class="logo-flow">Flow</span></div></div>
       <div class="streak-badge">🔥 <span id="streakCount">0</span> day streak</div>
     </div>
     <div class="greeting" id="greeting"></div>
